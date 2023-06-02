@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/sport.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/productdetails.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <title>SportsJam.in</title>
 </head>
 <body>
-     <!-- top nav section -->
-     <div class="top_nav">
+    <!-- top nav section -->
+    <div class="top_nav">
         <div>
             <i class="fa-solid fa-phone top_icon"></i>
             <p>call Us : +91-9555461555</p>
@@ -40,7 +39,7 @@
         </div>
 
         <form id="search_bar">
-            <input type="text" id="search" placeholder="search" onkeyup = "searching()">
+            <input type="text" id="search" placeholder="search">
             <i class="fa-solid fa-magnifying-glass"></i>
         </form>
         <div class="cart">
@@ -48,11 +47,12 @@
             <h4>Shoping Cart</h4>
         </div>
     </div>
-     <!-- bottom main nav section -->
 
-     <nav class="main_nav">
+    <!-- bottom main nav section -->
+
+    <nav class="main_nav">
         <ul>
-            <li><a href="sport.html">Sport</a>
+            <li><a href="sport.html" target="_blank">Sport</a>
                 <div class="sub_menu">
                     <ul>
                         <li><a href="Badminton.html"><h5>Badminton</h5></a><i class="fa-solid fa-angles-right"></i></li>
@@ -103,27 +103,6 @@
             </li>
         </ul>
     </nav>
-    <main class="main">
-        <div class="left">
-            
-        </div>
-        <div class="right">
-            <div class="top">
-                <p>Found <span class="show"></span> Product(s)</p>
-                <select id="filter">
-                    <option value="">SORT BY</option>
-                    <option value="assending">Price Low To High</option>
-                    <option value="descening">Price High To Low</option>
-                    <option value="popularity">Popularity</option>
-                    <option value="discount">Discount</option>
-                </select>
-            </div>
-            <div class="container">
-            </div>
-
-        </div>
-    </main>
-
 </body>
-<script src="scripts/sport.js"></script>
+<script src="scripts/productdetails.js"></script>
 </html>

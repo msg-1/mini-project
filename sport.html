@@ -40,7 +40,7 @@
         </div>
 
         <form id="search_bar">
-            <input type="text" id="search" placeholder="search">
+            <input type="text" id="search" placeholder="search" onkeyup = "searching()">
             <i class="fa-solid fa-magnifying-glass"></i>
         </form>
         <div class="cart">
@@ -107,9 +107,9 @@
         <div class="left"></div>
         <div class="right">
             <div class="top">
-                <p>Found <span class="show"></span>Product(s)</p>
+                <p>Found <span class="show"></span> Product(s)</p>
                 <select id="filter">
-                    <option value="">SORT BY</option>
+                    <option value="">Select...</option>
                     <option value="assending">Price Low To High</option>
                     <option value="descening">Price High To Low</option>
                     <option value="popularity">Popularity</option>

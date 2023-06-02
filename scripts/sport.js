@@ -474,6 +474,7 @@ filter.addEventListener("change",()=>{
 
 })
 
+let product = JSON.parse(localStorage.getItem("product")) || []
 
   function display(data){
     cont.innerHTML = null;
@@ -488,6 +489,10 @@ filter.addEventListener("change",()=>{
       card.append(img,des,price)
       cont.append(card)
       showTotalProduct.textContent = i+1
+
+      des.addEventListener("click",()=>{
+        localStorage.setItem("product",JSON.stringify(data[i]))
+      })
     }
 
   }

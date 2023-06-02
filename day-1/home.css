@@ -21,7 +21,9 @@
     padding-right: 20px;
 }
 #header >div >img{
-    width: 50%;
+    padding-top: 20px;
+    width: 30%;
+    height: 70px;
 }
 
 #navbar{
@@ -29,12 +31,25 @@
     display: flex;
     justify-content: space-around;
 }
-
-#Image > img{
+#Image{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+#Image Button{
+    background-color: azure;
+    font-size: 30px;
+    width: 5%;
+    height: 70px;
+}
+#Image > a>img{
+    overflow: hidden;
     width: 100%;
 }
 #cont{
     width: 90%;
+    padding-top: 50px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -86,4 +101,17 @@
     height: 50px;
     color:white;
     background-color: black;
+}
+
+#end{
+    padding-top: 50px;
+    width: 100%;
+}
+
+.btnend{
+    font-size: 20px;
+    width: 150px;
+    height: 50px;
+    margin: auto;
+
 }

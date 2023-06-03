@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <style>
+        body{
+    padding: 0px;
+    margin: 0px;
+}
+.navbar{
+    background-color: black;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: end;
+}
+.navbar>p{
+    margin-right: 2%;
+}
+.menu{
+    width: 95%;
+    margin: auto;
+    margin-top:1%;
+    display: flex;
+    justify-content: space-between;
+}
+#search{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 30%;
+    margin: 1%;
+}
+#line{
+    border: 1px solid rgb(243, 231, 231);
+}
+.catogary{
+    margin-left: 2%;
+}
+div>.cato{
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding:9px;
+}
+.cato:hover{
+    color:white;
+    background-color: black;
+}
+form{
+    text-align: center;
+    margin: auto;
+}
+form>input{
+    padding: 0.5%;
+    margin-bottom: 1%;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+form>input:nth-child(9){
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+form>input:nth-child(9):hover{
+    cursor: pointer;
+}
+body>h2{
+    text-align: center;
+}
+#cancel{
+    text-decoration: none;
+
+}
+#cancel>button{
+    display: flex;
+    align-items: center;
+    align-items: center;
+    margin: auto;
+    background-color: red;
+    color: white;
+    padding: 0.5%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#cancel>button:hover{
+    cursor: pointer;
+}
+.feature{
+    width: 100%;
+    margin-top: 10%;
+    background-color: #E1E1E1;
+}
+.feature>div{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    padding: 2%;
+}
+.feature>div>div>img{
+    width: 40%;
+    margin-bottom: 2%;
+}
+.feature>div>div>a{
+    color: black;
+}
+.info{
+    display: flex;
+    background-color: #262626;
+}
+.info>div>#a1{
+    width: 20%;
+}
+.info>div{
+    margin-right: 17%;
+}
+.info>div>h3{
+    font-size: 20px;
+    color: white;
+}
+.info>div>a{
+    text-decoration: none;
+    color: white;
+    font-size: 10px;
+}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <p>Call Us: +91-9555461555<p>
+        <p>Sign in</p>
+        <p>Create Account</p>
+        <p>Wishlist</p>
+    </div>
+    <div class="menu">
+        <a href="index.html">
+            <img src="https://storage.sg.content-cdn.io/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/userimages/logo.jpg" alt="">
+        </a>
+        <input id="search" type="text" placeholder="Search">
+        <p>Shopping Cart(<span id="cart-count"></span>)</p>
+    </div>
+    <hr id="line">
+    <div>
+        <a class="cato" href="./badminton.html">BADMINTON</a>
+        <a class="cato" href="./treadmills.html">TREADMILLS</a>
+        <a class="cato" href="./shoes.html">SHOES</a>
+        <a class="cato" href="./t-shirt.html">T-SHIRTS</a>
+        <a class="cato" href="./socks.html">SOCKS</a>
+        <a class="cato" href="./skating.html">SKATING</a>
+        <a class="cato" href="./teamindia.html">TEAM INDIA</a>
+    </div>
+    <hr>
+    <form action="">
+        <input type="text" placeholder="Enter Your Name" required><br>
+        <input type="number" placeholder="Enter Your Mobile Number" required><br>
+        <input type="email" placeholder="Enter Your E-mail" required><br>
+        <input type="text" placeholder="Enter Your Address" required><br>
+        <input type="submit">
+    </form>
+    <a href="index.html" id="cancel">
+        <button>Cancel Order</button>
+    </a>
+    <div class="feature">
+        <div>
+            <div>
+                <img src="https://img.myloview.com/stickers/gift-box-vector-icon-isolated-on-white-background-outline-thin-line-gift-box-icon-for-website-design-and-mobile-app-development-thin-line-gift-box-outline-icon-vector-illustration-700-213048726.jpg" alt=""><br>
+                <a href="index.html">E-gift Voucher</a>
+            </div>
+            <div>
+                <img src="https://img.myloview.com/stickers/gift-box-vector-icon-isolated-on-white-background-outline-thin-line-gift-box-icon-for-website-design-and-mobile-app-development-thin-line-gift-box-outline-icon-vector-illustration-700-213048726.jpg" alt=""><br>
+                <a href="index.html">Reward Points</a>
+            </div>
+            <div>
+                <img src="https://img.myloview.com/stickers/gift-box-vector-icon-isolated-on-white-background-outline-thin-line-gift-box-icon-for-website-design-and-mobile-app-development-thin-line-gift-box-outline-icon-vector-illustration-700-213048726.jpg" alt=""><br>
+                <a href="index.html">Buyers Guide</a>
+            </div>
+            <div>
+                <img src="https://img.myloview.com/stickers/gift-box-vector-icon-isolated-on-white-background-outline-thin-line-gift-box-icon-for-website-design-and-mobile-app-development-thin-line-gift-box-outline-icon-vector-illustration-700-213048726.jpg" alt=""><br>
+                <a href="index.html">Customized Services</a>
+            </div>
+            <div>
+                <img src="https://img.myloview.com/stickers/gift-box-vector-icon-isolated-on-white-background-outline-thin-line-gift-box-icon-for-website-design-and-mobile-app-development-thin-line-gift-box-outline-icon-vector-illustration-700-213048726.jpg" alt=""><br>
+                <a href="index.html">Express Shipping</a>
+            </div>
+            <div>
+                <img src="https://img.myloview.com/stickers/gift-box-vector-icon-isolated-on-white-background-outline-thin-line-gift-box-icon-for-website-design-and-mobile-app-development-thin-line-gift-box-outline-icon-vector-illustration-700-213048726.jpg" alt=""><br>
+                <a href="index.html">Secure Shopping</a>
+            </div>
+            <div>
+                <img src="https://img.myloview.com/stickers/gift-box-vector-icon-isolated-on-white-background-outline-thin-line-gift-box-icon-for-website-design-and-mobile-app-development-thin-line-gift-box-outline-icon-vector-illustration-700-213048726.jpg" alt=""><br>
+                <a href="index.html">100% Authentic</a>
+            </div>
+        </div>
+    </div>
+    <div class="info">
+        <div>
+            <h3>GET TO KNOW US</h3>
+            <a href="index.html">ABOUT US</a><br>
+            <a href="index.html">CONTACT US</a><br>
+            <a href="index.html">INQUIRY / FEEDBACK</a><br>
+            <a href="index.html">OUR STORES</a><br>
+            <a href="index.html">SPORTSJAM TEAM</a><br>
+        </div>
+        <div>
+            <h3>HERE TO HELP</h3>
+            <a href="index.html">REGISTER / LOGIN</a><br>
+            <a href="index.html">DELIVERY & CHARGES</a><br>
+            <a href="index.html">PAYMENT OPTIONS</a><br>
+            <a href="index.html">FAQ'S</a><br>
+            <a href="index.html">RETURNS POLICY</a><br>
+            <a href="index.html">TRACK MY ORDER</a><br>
+            <a href="index.html">BUY IN BULK</a><br>
+        </div>
+        <div>
+            <h3>PAYMENTS</h3>
+            <img src="https://storage.sg.content-cdn.io/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/userimages/Payments.png" alt="">
+        </div>
+        <div>
+            <h3>SIGN UP FOR NEWSLETTER</h3>
+            <input type="email" placeholder="Email here">
+            <h3>CONNECT WITH US</h3>
+            <img id="a1" src="https://img.freepik.com/premium-vector/set-facebook-twitter-instagram-youtube-icons_94603-98.jpg?w=996" alt=""><br>
+            <img id="a2" src="https://storage.sg.content-cdn.io/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/userimages/ssl.png" alt="">
+        </div>
+    </div>
+</body>
+<script>
+    let form=document.querySelector("form")
+    form.addEventListener("submit",function(e){
+        e.preventDefault()
+        form.reset()
+        let body=document.querySelector("body")
+        let head=document.createElement("h2")
+        head.innerText="Your Successfully Placed"
+        body.append(head)
+    })
+</script>
+</html>

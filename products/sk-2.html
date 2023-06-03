@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socks-2</title>
+    <style>
+    body{
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+    }
+    .navbar{
+        background-color: black;
+        width: 100%;
+        color: white;
+        display: flex;
+        justify-content: end;
+    }
+    .navbar>p{
+        margin-right: 2%;
+    }
+    .menu{
+        width: 95%;
+        margin: auto;
+        margin-top:1%;
+        display: flex;
+        justify-content: space-between;
+    }
+    #search{
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 30%;
+        margin: 1%;
+    }
+    #line{
+        border: 1px solid rgb(243, 231, 231);
+    }
+    .catogary{
+        margin-left: 2%;
+    }
+    div>.cato{
+        text-decoration: none;
+        color: black;
+        font-weight: 400;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding:9px;
+    }
+    .cato:hover{
+        color:white;
+        background-color: black;
+    }
+    #cont{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        gap: 5%;
+    }
+    button{
+        color: white;
+        background-color: orange;
+        border: 0px;
+        padding: 1%;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    h5{
+        color: orange;
+    }
+    #second>p:nth-child(7){
+        font-size: 10px;
+    }
+    #second>h2{
+        margin-top: 7%;
+    }
+    #cont>div>img{
+        width: 80%;
+    }
+    #cont>div{
+        margin: auto;
+    }
+    .menu>a{
+    text-decoration: none;
+    color: black;
+}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <p>Call Us: +91-9555461555<p>
+        <p>Sign in</p>
+        <p>Create Account</p>
+        <p>Wishlist</p>
+    </div>
+    <div class="menu">
+        <a href="index.html">
+            <img src="https://storage.sg.content-cdn.io/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/userimages/logo.jpg" alt="">
+        </a>
+        <input id="search" type="text" placeholder="Search">
+        <a href="./cart.html">
+            <p>Shopping Cart(<span id="cart-count"></span>)</p>
+        </a>
+    </div>
+    <hr id="line">
+    <div>
+        <a class="cato" href="./badminton.html">BADMINTON</a>
+        <a class="cato" href="./treadmills.html">TREADMILLS</a>
+        <a class="cato" href="./shoes.html">SHOES</a>
+        <a class="cato" href="./t-shirt.html">T-SHIRTS</a>
+        <a class="cato" href="./socks.html">SOCKS</a>
+        <a class="cato" href="./skating.html">SKATING</a>
+        <a class="cato" href="./teamindia.html">TEAM INDIA</a>
+    </div>
+    <hr>
+    <div id="cont">
+        
+    </div>
+</body>
+<script>
+    let data={
+        name:"JOMA ANKLE SOCKS (BLACK)",
+            image:"https://storage.sg.content-cdn.io/cdn-cgi/image/width=undefined,height=undefined,quality=75,format=auto/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/JM400027P01.jpg",
+            desc:"Joma Ankle Socks (Black)",
+            price:"₹ 199",
+            discount:"20% OFF",
+            id:"sk-2.html",
+            rate:"199"
+    }
+    let cont=document.getElementById("cont")
+    let first=document.createElement("div")
+    let second=document.createElement("div")
+    let image=document.createElement("img")
+    image.setAttribute("src",data.image)
+    first.append(image);
+
+    second.setAttribute("id","second")
+
+    let cart=localStorage.getItem("cart-list");
+    if (cart===null){
+        cart=[];
+    }
+    else{
+        cart=JSON.parse(cart)
+    }
+
+    let head=document.createElement("h2")
+    head.innerText=data.name
+    let line=document.createElement("hr")
+    let desc=document.createElement("p")
+    desc.innerText=data.desc
+
+    let size=document.createElement("p")
+    size.innerText="Size: "+data.size
+
+    let price=document.createElement("h3")
+    price.innerText=data.price;
+    let disc=document.createElement("h5")
+    disc.innerText=data.discount
+    let button=document.createElement("button")
+    button.innerText="ADD TO CART";
+    button.addEventListener("click",function(){
+        cart.push(data)
+        localStorage.setItem("cart-list",JSON.stringify(cart))
+        location.reload()
+    })
+
+    let qt=document.createElement("p")
+    qt.innerText="If you want to increase quantity please click again on ADD TO CART";
+    let info=document.createElement("p");
+    info.innerText="Delivered in 2-5 working days*"
+
+    second.append(head,line,desc,price,disc,button,qt,info)
+    cont.append(first,second)
+
+    let count=JSON.parse(localStorage.getItem("cart-list"));
+    document.getElementById("cart-count").innerText=count.length
+</script>
+</html>

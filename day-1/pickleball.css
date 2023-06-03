@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 #header {
     width: 100%;
     height: 100px;
@@ -30,4 +33,55 @@
     width: 60%;
     display: flex;
     justify-content: space-around;
+}
+
+#pick {
+    padding-top: 20px;
+    padding-left: 10px;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    gap: 20px 20px;
+}
+
+#filterSection {
+    padding-left: 10px;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 400px;
+}
+#product >div:nth-child(1){
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#product >div > select{
+    margin-top: 20px;
+    margin-right: 50px;
+    height: 30px;
+    width: 300px;
+}
+
+#productData {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px 20px;
+    /* border: 2px dotted red; */
+}
+
+#productData >div{
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#productData >div img{
+    width: 100%;
+}
+
+#end{
+    padding-top: 50px;
+    width: 100%;
 }

@@ -31,7 +31,10 @@ btn2.addEventListener("click",function(){
         ind=0;
     }
     headerImg.setAttribute("src", headImg[ind]);
-})
+});
+
+
+
 
 
 

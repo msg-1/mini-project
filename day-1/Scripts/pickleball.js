@@ -2,54 +2,54 @@ let data =[
     {
         image :"https://storage.sg.content-cdn.io/cdn-cgi/image/width=270,height=270,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/GARFWPP11.jpg",
         name:"Gamma Fushion",
-        price :"8199",
+        price :"₹8199",
         discount:"25% OFF",
     },
     {
         image :"https://storage.sg.content-cdn.io/cdn-cgi/image/width=270,height=270,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/GARDPP10.jpg",
         name:"Gamma Dart",
-        price :7399,
+        price :"₹7399",
         discount:"25% OFF"
     } 
     ,{
         image :"https://storage.sg.content-cdn.io/cdn-cgi/image/width=270,height=270,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/GARFPPP10.jpg",
         name:"Gamma Fushion",
-        price :6399,
+        price :"₹6399",
         discount:"25% OFF"
     }, {
         image :"https://storage.sg.content-cdn.io/cdn-cgi/image/width=270,height=270,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/GARMPP11.jpg",
         name:"Gamma Micron",
-        price :7299,
+        price :"₹7299",
         discount:"25% OFF"
     } ,
     {
         image :"https://storage.sg.content-cdn.io/cdn-cgi/image/width=270,height=270,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/GAROPP10.jpg",
         name:"Gamma Odyssey",
-        price :5499,
+        price :"₹5499",
         discount:"25% OFF"
     } ,
     {
         image :"https://storage.sg.content-cdn.io/cdn-cgi/image/width=270,height=270,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/GARQPP10.jpg",
         name:"Gamma Quest",
-        price :4899,
+        price :"₹4899",
         discount:"30% OFF"
     } ,
     {
         image :"https://storage.sg.content-cdn.io/cdn-cgi/image/width=270,height=270,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/GARGMPP14.jpg",
         name:"Gamma Mirage",
-        price : 9799,
+        price : "₹9799",
         discount:"20% OFF"
     } 
     ,{
         image :"https://storage.sg.content-cdn.io/cdn-cgi/image/width=270,height=270,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/GARGSPP10.jpg",
         name:"Gamma Shard",
-        price :11599,
+        price :"₹11599",
         discount:"15% OFF"
     } ,
     {
         image :"https://storage.sg.content-cdn.io/cdn-cgi/image/width=270,height=270,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/GACGOP3.jpg",
         name:"Gamma Photon",
-        price :1999,
+        price :"₹1999",
         discount:"25% OFF"
     } 
    
@@ -93,7 +93,7 @@ filter.addEventListener("change",function(){
 
 display(data)
 
-
+let LS = JSON.parse(localStorage.getItem("Bookmark")) || [];
 function display(data){
     product.innerHTML="";
     for(let i=0;i<data.length; i++){
@@ -104,14 +104,31 @@ function display(data){
     
         let name= document.createElement("h2");
         name.innerText = data[i].name;
-        let price= document.createElement("p");
+        let price= document.createElement("h3");
         price.innerText= data[i].price;
         let discount= document.createElement("p");
         discount.innerText = data[i].discount;
         discount.style.color="red";
+
+        let addCart = document.createElement("button")
+        addCart.innerText = "Add Cart";
     
-        div.append(imageD,name,price,discount);
+        div.append(imageD,name,price,discount,addCart);
     
         product.append(div);
+
+        addCart.addEventListener("click",function(){
+
+            let obj = {
+                image :data[i].image,
+                name :data[i].name,
+                price :data[i].price,
+                discount :data[i].discount
+
+            }
+            LS.push(obj);
+
+            localStorage.setItem("Bookmark",JSON.stringify(LS));
+        })
     }
 }

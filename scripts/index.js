@@ -1,3 +1,4 @@
+// top main hero slider
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
     centeredSlides: true,
@@ -15,5 +16,11 @@ var swiper = new Swiper(".mySwiper", {
     },
   });
 
+// new slider
+var splide = new Splide( '.splide', {
+  type    : 'loop',
+  perPage : 8,
+  autoplay: true,
+} );
 
-//   next slidder
+splide.mount();

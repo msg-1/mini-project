@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treadmills</title>
+    <style>
+body{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+.navbar{
+    background-color: black;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: end;
+}
+.navbar>p{
+    margin-right: 2%;
+}
+.menu{
+    width: 95%;
+    margin: auto;
+    margin-top:1%;
+    display: flex;
+    justify-content: space-between;
+}
+#search{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 30%;
+    margin: 1%;
+}
+#line{
+    border: 1px solid rgb(243, 231, 231);
+}
+.catogary{
+    margin-left: 2%;
+}
+div>.cato{
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding:9px;
+}
+.cato:hover{
+    color:white;
+    background-color: black;
+}
+#display{
+    display: grid;
+    width: 90%;
+    margin: auto;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2%;
+}
+#display>div{
+    text-align: center;
+    /* border: 1px solid black; */
+    text-decoration: none;
+    color: black;
+}
+#display>div>a{
+    text-decoration: none;
+    color: black;
+}
+#display>div:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#display>div>a>img{
+    width: 100%;
+}
+#display>div>a>p:nth-child(4){
+    color: orange;
+}
+#display>div>a>h2{
+    font-size: 15px;
+    font-weight: 500;
+}
+.menu>a{
+    text-decoration: none;
+    color: black;
+}
+@media screen and (max-width:800px){
+    #display{
+        display: grid;
+        width: 90%;
+        margin: auto;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2%;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <p>Call Us: +91-9555461555<p>
+        <p>Sign in</p>
+        <p>Create Account</p>
+        <p>Wishlist</p>
+    </div>
+    <div class="menu">
+        <a href="index.html">
+            <img src="https://storage.sg.content-cdn.io/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/userimages/logo.jpg" alt="">
+        </a>
+        <input id="search" type="text" placeholder="Search">
+        <a href="./cart.html">
+            <p>Shopping Cart(<span id="cart-count"></span>)</p>
+        </a>
+    </div>
+    <hr id="line">
+    <div>
+        <a class="cato" href="./badminton.html">BADMINTON</a>
+        <a class="cato" href="./treadmills.html">TREADMILLS</a>
+        <a class="cato" href="./shoes.html">SHOES</a>
+        <a class="cato" href="./t-shirt.html">T-SHIRTS</a>
+        <a class="cato" href="./socks.html">SOCKS</a>
+        <a class="cato" href="./skating.html">SKATING</a>
+        <a class="cato" href="./teamindia.html">TEAM INDIA</a>
+    </div>
+    <hr>
+    <div id="display">
+
+    </div>
+</body>
+<script>
+    let data=[
+        {
+            name:"ASSAULT ELITE AIRRUNNER",
+            image:"https://storage.sg.content-cdn.io/cdn-cgi/image/width=undefined,height=undefined,quality=75,format=auto/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/ASELTAIRRUNNER.jpg",
+            desc:"Built for both speed and comfort, the AssaultRunner Elite raises the standards of what’s expected of a manual treadmill. The AssaultRunner Elite pushes you to challenge the limits of your training from the comfort of your own home or gym. No other non-motorized treads come close to the AssaultRunner’s commercially-built frame structure, upgraded center console design, or onboard programming features. Plus, it’s compact, low-maintenance, easy to transport and requi",
+            price:"₹ 6,49,999",
+            discount:"6% OFF",
+            id:"tr-1.html",
+            rate:"649999"
+        },
+        {
+            name:"POWERMAX TAC 510 SEMI COMMERCIAL AC MOTOR TREADMILL",
+            image:"https://storage.sg.content-cdn.io/cdn-cgi/image/width=780,height=780,quality=75,format=auto/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/PMTAC510ACTM.jpg",
+            desc:"Powermax TAC 510 Semi Commercial AC Motor Treadmill",
+            price:"₹ 94,999",
+            discount:"41% OFF",
+            id:"tr-2.html",
+            rate:"94999"
+        },
+        {
+            name:"POWERMAX TDA-590 MOTORIZED TREADMILL",
+            image:"https://storage.sg.content-cdn.io/cdn-cgi/image/width=780,height=780,quality=75,format=auto/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/PMTDA590M.jpg",
+            desc:"Powermax TDA-590 Motorized Treadmill",
+            price:"₹ 99,999",
+            discount:"35% OFF",
+            id:"tr-3.html",
+            rate:"99999"
+        },
+        {
+            name:"POWERMAX TDA-600 MOTORIZED TREADMILL",
+            image:"https://storage.sg.content-cdn.io/cdn-cgi/image/width=780,height=780,quality=75,format=auto/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/PMTDA600.jpg",
+            desc:"Motorized Treadmill Multi-ply polyester satin weave with a PVC non-slip surface of 1.8mm thickness",
+            price:"₹ 93,999",
+            discount:"35% OFF",
+            id:"tr-4.html",
+            rate:"93999"
+        },
+        {
+            name:"POWERMAX TDM-100 MOTORIZED TREADMILL",
+            image:"https://storage.sg.content-cdn.io/cdn-cgi/image/width=780,height=780,quality=75,format=auto/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/PMTDM100.jpg",
+            desc:"Motorized Treadmill Multi-ply polyester satin weave with a PVC non-slip surface of 1.8mm thickness",
+            price:"₹ 34,999",
+            discount:"35% OFF",
+            id:"tr-5.html",
+            rate:"34999"
+        },
+        {
+            name:"POWERMAX TDA-575 MULTIFUNCTION MOTORIZED TREADMILL",
+            image:"https://storage.sg.content-cdn.io/cdn-cgi/image/width=780,height=780,quality=75,format=auto/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/PMTDA575MF.jpg",
+            desc:"Multifunction Motorized Treadmill Multi-ply polyester satin weave with a PVC non-slip surface of 1.8mm thickness",
+            price:"₹ 96,999",
+            discount:"35% OFF",
+            id:"tr-6.html",
+            rate:"96999"
+        },
+        {
+            name:"POWERMAX TDM-115S AUTO LUBRICATION",
+            image:"https://storage.sg.content-cdn.io/cdn-cgi/image/width=780,height=780,quality=75,format=auto/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/PMTDM115S.jpg",
+            desc:"Auto Lubrication Multi-ply urethane coated high conductivity polyester satin weave with a PVC non-slip surface of 1.8mm thickness",
+            price:"₹ 39,699",
+            discount:"35% OFF",
+            id:"tr-7.html",
+            rate:"39699"
+        },
+        {
+            name:"HORIZON TEMPO T903 MOTORIZED TREADMILL",
+            image:"https://storage.sg.content-cdn.io/cdn-cgi/image/width=780,height=780,quality=75,format=auto/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/HRTRTMT903.jpg",
+            desc:"Horizon Tempo T903 Motorized Treadmill is a 1.5 CHP motor treadmill from Tempo Fitness (sub-division of the ever popular Horizon Fitness Brand). The incline of 0-10% adds variety and intensity at the touch of a button. The treadmill has FLEX tech Cushioning which delivers the perfect amount of shock absorption.",
+            price:"₹ 84,915",
+            discount:"15% OFF",
+            id:"tr-8.html",
+            rate:"84915"
+        },
+        {
+            name:"PROLINE FITNESS TM 5000 TREADMILL",
+            image:"https://storage.sg.content-cdn.io/cdn-cgi/image/width=780,height=780,quality=75,format=auto/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/PRFTTRTM5000.jpg",
+            desc:"Proline Fitness TM 5000 Treadmill has a 3.0HP AC motor with 18 pre-set programs to enable your choice of workout.",
+            price:"₹ 1,98,900",
+            discount:"15% OFF",
+            id:"tr-9.html",
+            rate:"198900"
+        },
+        {
+            name:"POWERMAX TDM-97 MOTORIZED TREADMILL",
+            image:"https://storage.sg.content-cdn.io/cdn-cgi/image/width=780,height=780,quality=75,format=auto/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/PMTDM97M.jpg",
+            desc:"Motorized Treadmill Multi-ply polyester satin weave with a PVC non-slip surface of 1.8mm thickness",
+            price:"₹ 33,999",
+            discount:"25% OFF",
+            id:"tr-10.html",
+            rate:"33999"
+        },
+        {
+            name:"POWERMAX TDM-105 MOTORIZED TREADMILL",
+            image:"https://storage.sg.content-cdn.io/cdn-cgi/image/width=780,height=780,quality=75,format=auto/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/PMTDM105M.jpg",
+            desc:"Motorized Treadmill Multi-ply polyester satin weave with a PVC non-slip surface of 1.8mm thickness",
+            price:"₹ 40,999",
+            discount:"35% OFF",
+            id:"tr-11.html",
+            rate:"40999"
+        },
+        {
+            name:"POWERMAX TDA-600 MOTORIZED TREADMILL",
+            image:"https://storage.sg.content-cdn.io/cdn-cgi/image/width=780,height=780,quality=75,format=auto/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/PMTDA600.jpg",
+            desc:"Motorized Treadmill Multi-ply polyester satin weave with a PVC non-slip surface of 1.8mm thickness",
+            price:"₹ 93,999",
+            discount:"35% OFF",
+            id:"tr-12.html",
+            rate:"93999"
+        },
+    ]
+    let parent=document.getElementById("display")
+
+function display(data){
+    display.innerHTML="";
+    for (let i=0;i<data.length;i++){
+        let card=document.createElement("div")
+        
+        let link=document.createElement("a")
+        link.setAttribute("href",data[i].id)
+        let image=document.createElement("img")
+        image.setAttribute("src",data[i].image)
+
+        let line=document.createElement("hr")
+
+        let h2=document.createElement("h2")
+        h2.innerText=data[i].name;
+
+        let price=document.createElement("p")
+        price.innerText=data[i].price;
+
+        let dis=document.createElement("p")
+        dis.innerText=data[i].discount
+
+        link.append(image,line,h2,price,dis);
+        card.append(link)
+        parent.append(card)
+    }
+}
+display(data)
+
+let count=JSON.parse(localStorage.getItem("cart-list"));
+document.getElementById("cart-count").innerText=count.length
+</script>
+</html>

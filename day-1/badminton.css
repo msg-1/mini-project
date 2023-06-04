@@ -93,3 +93,30 @@ img{
 #shopcart a{
     text-decoration: none;
 }
+
+@media screen and (max-width :400px) {
+    #header{
+        display: none;
+    }
+    #navbar{
+        display: none;
+    }
+    .kit{
+        display: flex;
+        flex-direction: column;
+    }
+    .bag{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (min-width :401px) and (max-width :800px) {
+    .kit{
+        display: flex;
+        flex-direction: column;
+    }
+    .bag{
+        display: flex;
+        flex-direction: column;
+    }
+}

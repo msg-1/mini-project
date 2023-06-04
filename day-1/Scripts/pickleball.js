@@ -43,7 +43,7 @@ let data =[
     ,{
         image :"https://storage.sg.content-cdn.io/cdn-cgi/image/width=270,height=270,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/GARGSPP10.jpg",
         name:"Gamma Shard",
-        price :"₹11599",
+        price :"₹1199",
         discount:"15% OFF"
     } ,
     {
@@ -63,14 +63,28 @@ filter.addEventListener("change",function(){
     // event.preventDefault();
     if(filter.value === "Price Low to High"){
         let filterd = data.sort((a,b)=>{
-           return a.price - b.price;
+        //    return a.price - b.price;
+            if(a.price >b.price){
+                return 1;
+            }else if(a.price <b.price){
+                return -1;
+            }else{
+                return 0;
+            }
         })
 
         display(filterd);
     }
     else if(filter.value === "Price High to Low"){
         let filterd = data.sort((a,b)=>{
-           return b.price - a.price;
+        //    return b.price - a.price;
+           if(a.price <b.price){
+            return 1;
+           }else if(a.price >b.price){
+            return -1;
+           }else{
+            return 0;
+           }
         })
 
         display(filterd);
@@ -86,8 +100,7 @@ filter.addEventListener("change",function(){
             }
         })
         display(filterd);
-    }
-   
+    }  
     
 })
 
@@ -96,7 +109,7 @@ display(data)
 let LS = JSON.parse(localStorage.getItem("Bookmark")) || [];
 
 function display(data){
-   
+   product.innerHTML="";
     for(let i=0;i<data.length; i++){
         let div = document.createElement("div");
     

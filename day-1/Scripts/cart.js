@@ -1,5 +1,7 @@
-let LS = JSON.parse(localStorage.getItem("Bookmark"));
-
+let LS = JSON.parse(localStorage.getItem("Bookmark"))||[];
+function refresh(){
+    // let LS = JSON.parse(localStorage.getItem("Bookmark"))||[];
+}
 
 let box = document.getElementById("cont");
 
@@ -41,13 +43,14 @@ function display(data){
         // box.append(div);
 
         remove.addEventListener("click",function(){
-
+            alert("Are You Sure")
              LS = LS.filter((e)=>{
                 if(e.id !== data[i].id){
                     return e;
                 }
             })
             display(LS);
+            refresh();
             localStorage.setItem("Bookmark",JSON.stringify(LS));
             
         })

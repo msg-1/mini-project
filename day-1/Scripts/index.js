@@ -33,6 +33,11 @@ btn2.addEventListener("click",function(){
     headerImg.setAttribute("src", headImg[ind]);
 });
 
+let cart=document.getElementById("shopcart");
+
+cart.addEventListener("click",function(){
+    
+})
 
 
 

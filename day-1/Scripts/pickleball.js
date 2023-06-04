@@ -94,8 +94,9 @@ filter.addEventListener("change",function(){
 display(data)
 
 let LS = JSON.parse(localStorage.getItem("Bookmark")) || [];
+
 function display(data){
-    product.innerHTML="";
+   
     for(let i=0;i<data.length; i++){
         let div = document.createElement("div");
     
@@ -116,11 +117,11 @@ function display(data){
         div.append(imageD,name,price,discount,addCart);
     
         product.append(div);
-
         addCart.addEventListener("click",function(){
 
             let obj = {
                 image :data[i].image,
+                id :Math.random()*1000+1+data[i].name,
                 name :data[i].name,
                 price :data[i].price,
                 discount :data[i].discount
@@ -131,4 +132,7 @@ function display(data){
             localStorage.setItem("Bookmark",JSON.stringify(LS));
         })
     }
+
+
+    
 }

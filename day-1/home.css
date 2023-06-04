@@ -20,13 +20,12 @@
 #header >div{
     display: flex;
     width: 200px;
-    /* justify-content: space-between; */
     padding-right: 20px;
 }
 #header >div >img{
     padding-top: 20px;
-    width: 30%;
-    height: 70px;
+    width: 40%;
+    height: 80px;
 }
 
 #navbar{
@@ -144,4 +143,7 @@
 #shopcart{
     padding-top: 20px;
     padding-left: 20px;
+}
+#shopcart a{
+    text-decoration: none;
 }

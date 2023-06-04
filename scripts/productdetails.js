@@ -18,11 +18,6 @@ function display(data){
     card.append(img,des,price)
     cont.append(card)
     showTotalProduct.textContent = i+1
-
-    des.addEventListener("click",()=>{
-      product.push(data[i])
-      localStorage.setItem("product",JSON.stringify(product))
-    })
   }
 
 }

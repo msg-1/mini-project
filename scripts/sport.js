@@ -1,6 +1,7 @@
 let shoesArray = [
   // Nike
   {
+    id : 1,
     brand: "NIKE",
     model: "Air Max 90",
     color: "Black/White",
@@ -8,6 +9,7 @@ let shoesArray = [
     imageLink: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/9355f630-53c7-4567-89b4-a788c93171ea/air-zoom-gt-jump-basketball-shoes-22QS5F.png"
   },
   {
+    id : 2,
     brand: "NIKE",
     model: "Air Jordan 1",
     color: "Red/Black",
@@ -15,6 +17,7 @@ let shoesArray = [
     imageLink: "https://assets.ajio.com/medias/sys_master/root/20211224/1tuJ/61c4c229aeb26901101a2a6a/-473Wx593H-469034008-black-MODEL.jpg"
   },
   {
+    id : 3,
     brand: "NIKE",
     model: "React Infinity Run",
     color: "Blue/Green",
@@ -22,6 +25,7 @@ let shoesArray = [
     imageLink: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/fdded470-0ac5-4bd7-b41b-1bb63e161438/custom-nike-air-force-1-mid-by-you-shoes.png"
   },
   {
+    id : 4,
     brand: "NIKE",
     model: "React Infinity Run",
     color: "Blue/Green",
@@ -29,6 +33,7 @@ let shoesArray = [
     imageLink: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/a162ca4b-a442-4182-bfa0-4be07063e623/air-max-alpha-trainer-5-training-shoes-x8Jzj6.png"
   },
   {
+    id : 5,
     brand: "NIKE",
     model: "Air Jordan 1",
     color: "Red/Black",
@@ -36,6 +41,7 @@ let shoesArray = [
     imageLink: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/87d7e901-4d08-4456-9d62-07e821aff45b/air-max-90-futura-shoes-x9msLm.png"
   },
   {
+    id : 6,
     brand: "NIKE",
     model: "Air Max 90",
     color: "Black/White",
@@ -44,6 +50,7 @@ let shoesArray = [
   },
   // Puma
   {
+    id : 7,
     brand: "PUMA",
     model: "Suede Classic",
     color: "Black/White",
@@ -51,6 +58,7 @@ let shoesArray = [
     imageLink: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/195202/03/sv01/fnd/IND/fmt/png/Erupter-Men's-Running-Shoes"
   },
   {
+    id : 8,
     brand: "PUMA",
     model: "Clyde Court",
     color: "Purple/Yellow",
@@ -58,6 +66,7 @@ let shoesArray = [
     imageLink: "https://i8.amplience.net/s/scvl/117239_243484_SET/2?fmt=auto&$webPdpProduct$"
   },
   {
+    id : 9,
     brand: "PUMA",
     model: "RS-X",
     color: "White/Red",
@@ -65,6 +74,7 @@ let shoesArray = [
     imageLink: "https://www.tradeinn.com/f/13783/137835778/puma-mirage-tech-%CE%A0%CF%81%CE%BF%CF%80%CE%BF%CE%BD%CE%B7%CF%84%CE%AD%CF%82.jpg"
   },
   {
+    id : 10,
     brand: "PUMA",
     model: "RS-X",
     color: "White/Red",
@@ -72,6 +82,7 @@ let shoesArray = [
     imageLink: "https://cdn.shopify.com/s/files/1/0262/1574/3576/products/image_0c188859-ece6-4b72-8c34-5476e18e9e1e_1200x1200.webp?v=1657057795"
   },
   {
+    id : 11,
     brand: "PUMA",
     model: "Suede Classic",
     color: "Black/White",
@@ -80,6 +91,7 @@ let shoesArray = [
   },
   // Adidas
   {
+    id : 12,
     brand: "ADIDAS",
     model: "Ultraboost",
     color: "Grey/White",
@@ -87,6 +99,7 @@ let shoesArray = [
     imageLink: "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/15f901c90a9549d29104aae700d27efb_9366/SUPERSTAR_SHOES_Black_EG4959_01_standard.jpg"
   },
   {
+    id : 13,
     brand: "ADIDAS",
     model: "Stan Smith",
     color: "White/Green",
@@ -94,13 +107,14 @@ let shoesArray = [
     imageLink: "https://assets.adidas.com/images/w_600,f_auto,q_auto/4d31131033b54e67b045ab2f017c6cda_9366/Superstar_Shoes_White_FU7714_01_standard.jpg"
   },
   {
+    id : 14,
     brand: "ADIDAS",
     model: "NMD R1",
     color: "Black/Red",
     price: 129.99,
     imageLink: "https://assets.adidas.com/images/w_600,f_auto,q_auto/641ca1a4fe0643068371aef900c3a51e_9366/Ultrabounce_Shoes_White_HP5771_01_standard.jpg"
   },
-  {
+  {id : 15,
     brand: "ADIDAS",
     model: "NMD R1",
     color: "Black/Red",
@@ -108,6 +122,7 @@ let shoesArray = [
     imageLink: "https://cdn.shopify.com/s/files/1/2031/6995/products/GV8270_6_grande.jpg?v=1646760541"
   },
   {
+    id : 16,
     brand: "ADIDAS",
     model: "Stan Smith",
     color: "Black/Red",
@@ -116,6 +131,7 @@ let shoesArray = [
   },
   // Reebok
   {
+    id : 17,
     brand: "REEBOK",
     model: "Classic Leather",
     color: "White",
@@ -490,8 +506,9 @@ let product = JSON.parse(localStorage.getItem("product")) || []
       cont.append(card)
       showTotalProduct.textContent = i+1
 
-      des.addEventListener("click",()=>{
+      card.addEventListener("click",()=>{
         localStorage.setItem("product",JSON.stringify(data[i]))
+        window.location.assign("productdetails.html")
       })
     }
 

@@ -117,3 +117,9 @@ body{
 }
 
 /* nav end here */
+
+.container{
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+}

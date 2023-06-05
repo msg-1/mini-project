@@ -1,28 +1,57 @@
+let showcart = document.querySelector(".showcart")
+
+
+
+
+// if(cart.length < 1 ){
+//   showcart.textContent = "0"
+// }else{
+//   for(let i=0;i<cart.length;i++){
+//     showcart.textContent = i+1
+//   }
+// }
+let cart = localStorage.getItem("cart")
+
+if(!cart){
+ cart =[]
+}else{
+  cart = JSON.parse(cart)
+}
+
+
 let product = JSON.parse(localStorage.getItem("product")) || [] ;
 
 let cont = document.querySelector(".container")
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let showTotalProduct = document.querySelector(".show");
 
+// console.log(product.brand)
 
-function display(data){
-  cont.innerHTML = null;
-  for(let i=0; i<data.length; i++){
-    let card = document.createElement("div")
-    let img = document.createElement("img")
-    img.setAttribute("src",data[i].imageLink) 
-    let des = document.createElement("p")
-    des.innerText = `${data[i].brand}  ${data[i].model}`
-    let price = document.createElement("h4")
-    price.innerText = data[i].price
-    card.append(img,des,price)
-    cont.append(card)
-    showTotalProduct.textContent = i+1
-  }
+let image = document.querySelector(".left >img");
 
-}
+image.setAttribute("src",product.imageLink)
 
-display(product)
+let product_head = document.querySelector(".product-head")
+
+product_head.textContent = `${product.brand} ${product.model}`.toUpperCase()
+
+let product_name = document.querySelector(".product-name")
+
+product_name.textContent = `${product.brand} ${product.model}`
+
+let product_price = document.querySelector(".product-price")
+
+product_price.textContent = product.price
+
+let btn = document.querySelector(".add-cart")
+
+// btn.addEventListener("click",()=>{
+//   // cart.push(product)
+//   console.log(cart)
+// })
+console.log(Array.isArray(cart))
+
+
+
 
 //-------- search function -----
 
@@ -45,3 +74,7 @@ for(let i=0; i<card.length; i++){
   }
 }
 }
+
+
+
+

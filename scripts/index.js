@@ -1,3 +1,14 @@
+let showcart = document.querySelector(".showcart")
+let cartdata = JSON.parse(localStorage.getItem("cart")) || [];
+
+if(cartdata.length < 1 ){
+  showcart.textContent = "0"
+}else{
+  for(let i=0;i<cartdata.length;i++){
+    showcart.textContent = i+1
+  }
+}
+
 // top main hero slider
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,

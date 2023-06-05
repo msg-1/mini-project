@@ -65,10 +65,20 @@ body{
     padding-right: 10px;
 }
 .cart{
+    position: relative;
     padding-right: 20px;
     display: flex;
     justify-content: space-around;
     width: 200px;
+}
+.showcart{
+    position: absolute;
+    border-radius: 50%;
+    background-color: #ff6600;
+    padding: 2px 5px;
+    color: #fff;
+    left: 15%;
+    top: -35%;
 }
 .cart i{
     font-size: 35px;
@@ -119,7 +129,55 @@ body{
 /* nav end here */
 
 .container{
-    width: 100%;
+    width: 95%;
     display: flex;
     margin-top: 50px;
+    justify-content: space-between;
+}
+.left{
+    width: 47%;
+    margin-left: 20px;
+}
+.left >img{
+    width: 100%;
+}
+.right{
+    width: 47%;
+}
+.star{
+    margin-top: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(94, 92, 92 ,0.7);
+}
+.star >span{
+    padding-left: 5px;
+}
+.star >span a{
+    color: #000;
+}
+.product-name{
+    margin-top: 15px;
+}
+.fa-indian-rupee-sign{
+    padding: 15px 0;
+}
+.product-price{
+    font-size: 20px;
+}
+.price{
+    border-bottom: 1px solid rgba(94, 92, 92 ,0.7);
+}
+.add-cart{
+    margin-top: 20px;
+    width: 170px;
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+    border: none;
+    background-color: #ff6600;
+    cursor: pointer;
+}
+.add-cart >i{
+    padding-right: 10px;
+    font-size: 16px;
 }

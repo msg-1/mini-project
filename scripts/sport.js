@@ -464,8 +464,19 @@ let shoesArray = [
 },
 ]
 
+let showcart = document.querySelector(".showcart")
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+if(cart.length < 1 ){
+  showcart.textContent = "0"
+}else{
+  for(let i=0;i<cart.length;i++){
+    showcart.textContent = i+1
+  }
+}
+
   let cont = document.querySelector(".container")
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  
   let showTotalProduct = document.querySelector(".show");
   let filter = document.getElementById("filter")
 

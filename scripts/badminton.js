@@ -150,6 +150,18 @@ let BadmintonArray = [
     imageLink: "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/41hErtUssNL.jpg"
   },
   ]
+
+  let showcart = document.querySelector(".showcart")
+let cartdata = JSON.parse(localStorage.getItem("cart")) || [];
+
+if(cartdata.length < 1 ){
+  showcart.textContent = "0"
+}else{
+  for(let i=0;i<cartdata.length;i++){
+    showcart.textContent = i+1
+  }
+}
+
   let cont = document.querySelector(".container")
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   let showTotalProduct = document.querySelector(".show");
@@ -190,6 +202,11 @@ filter.addEventListener("change",()=>{
       card.append(img,des,price)
       cont.append(card)
       showTotalProduct.textContent = i+1
+      
+      card.addEventListener("click",()=>{
+        localStorage.setItem("product",JSON.stringify(data[i]))
+        window.location.assign("productdetails.html")
+      })
     }
 
   }

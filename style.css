@@ -1,0 +1,159 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    
+}
+#navbar{
+background-color: black;
+height: 35px;
+}
+
+#navbar > div{
+display: flex;
+justify-content: end;
+align-items: center;
+gap: 20px;
+padding: 8px;
+padding-right: 20px;
+
+}
+#navbar > div > a{
+color: white;
+}
+
+#navbar2{
+background-color:white;
+}
+#navbar2 > div{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 8px;
+}
+#navbar3{
+border: 1px solid lightgray;
+height: 40px;
+}
+#navbar3 > div{
+display: flex;
+justify-content: start;
+gap: 14px;
+align-items: end;
+padding: 10px; 
+}
+#navbar3 > div > a{
+color: black;
+}
+
+#slides{
+width: 99%;
+margin: auto;
+text-align: center;
+}
+#slides img{
+width: 100%;
+}
+#slides button{
+    font-size: 18px;
+}
+#category{
+ width: 97%;
+ margin: auto;
+ display: flex;
+ text-align: center;
+ 
+}
+#category div{
+ width: 33%;
+ gap: 25px;
+
+}
+#category div > img{
+width: 100%;
+padding: 20px;
+}
+
+.middle{
+display: flex;
+align-items: center;
+width: 93%;
+margin: auto;
+}
+.middle > div {
+width: 50%;
+
+}
+.middle > div> img{
+width: 550px;
+}
+
+#sports{
+display: flex;
+width: 93%;
+margin: auto;
+padding-top: 25px;
+text-align: center;
+
+}
+#sports> div{
+width: 50%;
+
+}
+
+#sports> div >img{
+width: 550px;
+}
+
+
+#shoes{
+width: 100%;
+margin: auto;
+}
+
+#shoes > img{
+width:100%;
+}
+
+#services{
+background-color: lightgrey;
+display: grid;
+grid-template-columns: repeat(6,1fr);
+
+}
+#services> div{
+display: grid;
+width: 18%;
+margin-left: 75px;
+padding: 30px;
+
+
+}
+
+#services> div > img{
+ width: 60px;
+ text-align: center;
+}
+
+#services > div > a{
+color: black;
+}
+
+#bottom{
+background-color: black;
+display: flex;
+justify-content: space-between;
+height: 400px;
+
+}
+#bottom > div{
+display: grid;
+
+}
+
+#bottom > div > a{
+color: white;
+}
+#bottom > div > h3 > a{
+color: white;
+}

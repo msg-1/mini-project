@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: Robota,sans-serif;
 }
 #header {
     width: 100%;
@@ -29,15 +30,17 @@
 }
 
 #navbar{
-    width: 80%;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
 }
 #navbar :hover{
     background-color:black;
     color: white;
 }
-
+.sport-1{
+    text-align: center;
+    padding-right: 20px;
+}
 #Image{
     width: 100%;
     display: flex;

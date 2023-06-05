@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    font-family: Robota,sans-serif;
 }
 #header {
     width: 100%;
@@ -30,9 +31,8 @@
 }
 
 #navbar{
-    width: 80%;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
 }
 #navbar :hover{
     background-color:black;
@@ -46,11 +46,14 @@
 .sport{
     display: none;
 }
-
+.sport-1{
+    text-align: center;
+    padding-right: 20px;
+}
 #navbar :hover .sport{
     display: block;
     position: absolute;
-    margin-top: 30px;
+    margin-top: 10px;
     background-color: lightblue;
 }
 #shopcart{
@@ -63,20 +66,54 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    border: 2px solid black;
     margin: auto;
-    text-align: center;
-    /* background-color: aquamarine; */
+  
 }
 #cont div {
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#box{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin: auto;
+    text-align: center;
+}
+#box div {
     display: flex;
     align-items: center;
     justify-content: center;
     border: 2px solid black;
 }
-#cont div img{
+#box div img{
     padding-top: 20px;
     width: 25%;
 }
-#box {
+.quantity{
+    display: flex;
+    justify-content: space-between;
+    gap:1rem;
+    align-items: center;
+}
+#remove:hover{
+  background-color: rgb(230, 167, 167);
+  color:rgb(231, 31, 9);
+  border-radius: 5px;
+  border:1px solid green;
+  padding: 9px 14px;
+}
+
+@media screen and (max-width :400px) {
+    #header{
+        display: none;
+    }
+    #navbar{
+        display: none;
+    }
+    
 }

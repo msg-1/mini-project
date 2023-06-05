@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/sport.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>SportsJam.in</title>
+</head>
+<body>
+     <!-- top nav section -->
+     <div class="top_nav">
+        <div>
+            <i class="fa-solid fa-phone top_icon"></i>
+            <p>call Us : +91-9555461555</p>
+        </div>
+        <div>
+            <i class="fa-sharp fa-solid fa-right-to-bracket top_icon"></i>
+            <p>Sign in</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-user top_icon"></i>
+            <p>Create Account</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-heart top_icon"></i>
+            <p>Wislist</p>
+        </div>
+    </div>
+
+    <!-- mid nav logo section -->
+
+    <div class="mid_nav">
+        <div class="logo">
+            <a href="index.html">
+                <img src="https://storage.sg.content-cdn.io/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/userimages/logo.jpg" alt="Logo">
+            </a>
+        </div>
+
+        <form id="search_bar">
+            <input type="text" id="search" placeholder="search" onkeyup = "searching()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </form>
+        <div class="cart">
+            <h3 class="showcart"></h3>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <h4>Shoping Cart</h4>
+        </div>
+    </div>
+     <!-- bottom main nav section -->
+
+     <nav class="main_nav">
+        <ul>
+            <li><a href="sport.html">Sport</a>
+                <div class="sub_menu">
+                    <ul>
+                        <li><a href="Badminton.html"><h5>Badminton</h5></a><i class="fa-solid fa-angles-right"></i></li>
+                        <li><a href="sport.html">Rackets</a><i class="fa-solid fa-angles-right"></i></li>
+                        <li><a href="sport.html">Shoes</a><i class="fa-solid fa-angles-right"></i></li>
+                        <li><a href="sport.html">Shuttlecock</a><i class="fa-solid fa-angles-right"></i></li>
+                        <li><a href="sport.html">Grips</a><i class="fa-solid fa-angles-right"></i></li>
+                        <li><a href="sport.html">Strings</a><i class="fa-solid fa-angles-right"></i></li>
+                        <li><a href="sport.html">Kit Bags</a><i class="fa-solid fa-angles-right"></i></li>
+                        <li><a href="sport.html">Clothings</a><i class="fa-solid fa-angles-right"></i></li>
+                        <li><a href="sport.html">Accessories</a><i class="fa-solid fa-angles-right"></i></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <a href="Fitness.html">Fitness</a>
+                <div class="sub_menu">
+                    <ul>
+                        <li><a href="Fitness.html"><h5>Abs & Core</h5></a><i class="fa-solid fa-angles-right"></i></li>
+                        <li><a href="Fitness.html">Ab Traners</a><i class="fa-solid fa-angles-right"></i></li>
+                        <li><a href="Fitness.html">Gym Balls</a><i class="fa-solid fa-angles-right"></i></li>
+                        <li><a href="Fitness.html">Fitness Mats</a><i class="fa-solid fa-angles-right"></i></li>
+                        <li><a href="Fitness.html">Balance Board</a><i class="fa-solid fa-angles-right"></i></li>
+                        <li><a href="Fitness.html">Rollers</a><i class="fa-solid fa-angles-right"></i></li>
+                        <li><a href="Fitness.html">Twisrers & Wheel</a><i class="fa-solid fa-angles-right"></i></li>
+                        <li><a href="Fitness.html">Yoga & Pilates</a><i class="fa-solid fa-angles-right"></i></li>
+                        
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="shoes.html">SHOES</a>
+                <div class="sub_menu">
+                    <ul>
+                        <li><a href="sport.html"><h5>Men</h5></a><i class="fa-solid fa-angles-right"></i></li>
+                        <li><a href="sport.html">Badminton</a><i class="fa-solid fa-angles-right"></i></li>
+                        <li><a href="sport.html">Basketball</a><i class="fa-solid fa-angles-right"></i></li>
+                        <li><a href="sport.html">Cricket</a><i class="fa-solid fa-angles-right"></i></li>
+                        <li><a href="sport.html">Football</a><i class="fa-solid fa-angles-right"></i></li>
+                        <li><a href="sport.html">Running</a><i class="fa-solid fa-angles-right"></i></li>
+                        <li><a href="sport.html">Squash</a><i class="fa-solid fa-angles-right"></i></li>
+                        <li><a href="sport.html">Tennis</a><i class="fa-solid fa-angles-right"></i></li>
+                        <li><a href="sport.html">Table Tennis</a><i class="fa-solid fa-angles-right"></i></li>
+                        <li><a href="sport.html">Volleyball</a><i class="fa-solid fa-angles-right"></i></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <main class="main">
+        <div class="left">
+            
+        </div>
+        <div class="right">
+            <div class="top">
+                <p>Found <span class="show"></span> Product(s)</p>
+                <select id="filter">
+                    <option value="">SORT BY</option>
+                    <option value="assending">Price Low To High</option>
+                    <option value="descening">Price High To Low</option>
+                    <option value="popularity">Popularity</option>
+                    <option value="discount">Discount</option>
+                </select>
+            </div>
+            <div class="container">
+            </div>
+
+        </div>
+    </main>
+
+</body>
+<script src="scripts/sport.js"></script>
+</html>
